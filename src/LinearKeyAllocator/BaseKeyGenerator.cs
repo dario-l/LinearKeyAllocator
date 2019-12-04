@@ -52,7 +52,7 @@ namespace LinearKeyAllocator
 
         private const string queryGetNextMaxFor = @"
 DECLARE @Value bigint = @SeedSize
-MERGE [dbo].[LinearChunkAllocator] WITH (ROWLOCK) AS [Target]
+MERGE [dbo].[LinearKeyAllocator] WITH (ROWLOCK) AS [Target]
 USING (SELECT @Key AS [Key]) AS [Source] ON [Target].[Key] = [Source].[Key]
 WHEN MATCHED THEN UPDATE SET NextMax = (NextMax + @SeedSize), @Value = (NextMax + @SeedSize)
 WHEN NOT MATCHED THEN INSERT([Key], NextMax)VALUES(@Key, @SeedSize);SELECT @Value;";
@@ -68,11 +68,11 @@ WHEN NOT MATCHED THEN INSERT([Key], NextMax)VALUES(@Key, @SeedSize);SELECT @Valu
         }
 
         private const string queryInitialize = @"
-IF OBJECT_ID('[dbo].[LinearChunkAllocator]', 'U') IS NULL BEGIN
-    CREATE TABLE [dbo].[LinearChunkAllocator](
+IF OBJECT_ID('[dbo].[LinearKeyAllocator]', 'U') IS NULL BEGIN
+    CREATE TABLE [dbo].[LinearKeyAllocator](
         [Key] [varchar](255) NOT NULL,
         [NextMax] [bigint] NOT NULL,
-        CONSTRAINT [PK_LinearChunkAllocator] PRIMARY KEY CLUSTERED ([Key] ASC)
+        CONSTRAINT [PK_LinearKeyAllocator] PRIMARY KEY CLUSTERED ([Key] ASC)
     ) ON [PRIMARY]
 END";
     }
