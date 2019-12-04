@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Authors>Dariusz Lenartowicz</Authors>
+    <PackageProjectUrl>https://github.com/dario-l/LinearKeyAllocator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dario-l/LinearKeyAllocator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>hilo generator chunk linear</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
     <ItemGroup>
