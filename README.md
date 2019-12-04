@@ -1,5 +1,20 @@
 # LinearKeyAllocator
 
+LinearKeyAllocator allows to generate incremental keys (int, long) based
+on last seed value stored in database.
+
+Works likes the Hilo algorithm (from NHibernate) but better becouse
+do not create big holes when application restarts.
+
+It aims to be a tool for generating database keys without having to
+rely on RDBMS identity column.
+
+LinearKeyAllocator works like database 'Sequence'.
+It means does not attach to any ambient transaction.
+
+Once generated chunk of keys are available until application restarts.
+After restart it will start from last saved max value.
+
 **Example**
 ``` c#
 class Program
