@@ -15,7 +15,9 @@ class Program
         const string type2 = "Type2";
 
         using var scope =
-            new TransactionScope(TransactionScopeOption.Required, TransactionScopeAsyncFlowOption.Enabled);
+            new TransactionScope(
+                TransactionScopeOption.Required,
+                TransactionScopeAsyncFlowOption.Enabled);
 
         for (var i = 0; i < 5000; i++)
         {
