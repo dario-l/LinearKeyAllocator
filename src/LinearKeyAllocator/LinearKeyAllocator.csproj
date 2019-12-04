@@ -9,7 +9,8 @@
     <PackageTags>hilo generator chunk linear</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
+    <Description>LinearKeyAllocator allows to generate incremental keys (int, long) based on last seed value stored in database.</Description>
   </PropertyGroup>
 
     <ItemGroup>

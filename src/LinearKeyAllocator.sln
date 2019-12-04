@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearKeyAllocator.Example", "LinearKeyAllocator.Example\LinearKeyAllocator.Example.csproj", "{1AD632E0-063F-4608-B51C-26A007AD84B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearKeyAllocator", "LinearKeyAllocator\LinearKeyAllocator.csproj", "{473C17E4-CDE3-4A4B-BBF6-5A4E876A84D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearKeyAllocator", "LinearKeyAllocator\LinearKeyAllocator.csproj", "{473C17E4-CDE3-4A4B-BBF6-5A4E876A84D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A3EAD73-3DE9-4AEE-BFFF-37D2B677EB71}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
