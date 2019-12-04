@@ -10,7 +10,7 @@ namespace LinearKeyAllocator
 {
     internal abstract class BaseKeyGenerator
     {
-        private const byte keyMaxLength = 50;
+        private const byte keyMaxLength = 255;
         private readonly string _connectionString;
 
         protected BaseKeyGenerator(string key, ushort seedSize, string connectionString)
@@ -70,7 +70,7 @@ WHEN NOT MATCHED THEN INSERT([Key], NextMax)VALUES(@Key, @SeedSize);SELECT @Valu
         private const string queryInitialize = @"
 IF OBJECT_ID('[dbo].[LinearChunkAllocator]', 'U') IS NULL BEGIN
     CREATE TABLE [dbo].[LinearChunkAllocator](
-        [Key] [varchar](50) NOT NULL,
+        [Key] [varchar](255) NOT NULL,
         [NextMax] [bigint] NOT NULL,
         CONSTRAINT [PK_LinearChunkAllocator] PRIMARY KEY CLUSTERED ([Key] ASC)
     ) ON [PRIMARY]
