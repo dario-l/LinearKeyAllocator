@@ -1,7 +1,7 @@
 # LinearKeyAllocator
 
+**Example**
 ``` c#
-
 class Program
 {
     private static string cnn =
@@ -33,5 +33,13 @@ class Program
         Console.ReadKey();
     }
 }
+```
 
+**Sql Script**
+``` SQL
+CREATE TABLE [dbo].[LinearKeyAllocator](
+    [Key] [varchar](255) NOT NULL,
+    [NextMax] [bigint] NOT NULL,
+    CONSTRAINT [PK_LinearKeyAllocator] PRIMARY KEY CLUSTERED ([Key] ASC)
+) ON [PRIMARY]
 ```
