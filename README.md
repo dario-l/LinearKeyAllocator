@@ -1,4 +1,5 @@
 # LinearKeyAllocator
+![LinearKeyAllocator](https://img.shields.io/nuget/v/LinearKeyAllocator)
 
 LinearKeyAllocator allows to generate incremental keys (int, long) based
 on last seed value stored in database.
