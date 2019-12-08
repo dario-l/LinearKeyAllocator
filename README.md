@@ -16,7 +16,9 @@ It means does not attach to any ambient transaction.
 Once generated chunk of keys are available until application restarts.
 After restart it will start from last saved max value.
 
+
 **Why is it better than HiLo?**
+
 Set LinearKeyAllocator seedSize to 20.
 
 ```
